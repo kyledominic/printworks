@@ -240,6 +240,43 @@
     color: #69443C;
   }
 
+  .bg-brown {
+    background-color: #69443C;
+  }
+
+  .text-lightbrown {
+    color: #ad9e8e;
+  } 
+
+  .bg-lightbrown {
+    background-color: #ad9e8e;
+  }
+
+  .text-lighterbrown {
+    color: #beb3a8;
+  } 
+
+  .bg-lighterbrown {
+    background-color: #beb3a8;
+  } 
+
+
+  .text-lightestbrown {
+    color: #dad4cd;
+  } 
+
+  .bg-lightestbrown {
+    background-color: #dad4cd;
+  } 
+
+  .text-cream {
+    color: #e9e5e0;
+  }
+
+  .bg-cream {
+    background-color: #e9e5e0;
+  }
+
   .brightness-50:hover {
     filter: brightness(50%);
   }
@@ -249,4 +286,17 @@
   }
 
   
-  
+  /* CSS for the animate-box class */
+.animate-box {
+  /* Define initial state */
+  opacity: 0;
+  transform: translateY(20px);
+  /* Define transition */
+  transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+/* Additional styles for when the element is in an animated state */
+.animate-box.animated {
+  opacity: 1;
+  transform: translateY(0);
+}
