@@ -18,7 +18,15 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/additional.css">
-
+    <link rel="stylesheet" href="css/additional2.css">
+    
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/main.js"></script>
+    
     <title>Printworks</title>
   </head>
   <body>
@@ -66,7 +74,7 @@
       <div class="site-navbar site-navbar-target js-sticky-header">
         <div class="container">
           <div class="row align-items-center">
-            <div class="col-2">
+            <div class="col-2 d-flex align-items-center">
               <h1 class="my-0 site-logo"><a href="index.html">Printworks</a></h1>
             </div>
             <div class="col-10">
@@ -110,7 +118,7 @@
       <div class="pt-5 flex flex-col justify-content items-center align-center text-center  relative">
         <div class="mm flex flex-col justify-content items-center align-center text-center">
           <img class="h-10 mb-3" src="/images/date.png" alt="">
-          <img class="h-10" src="/images/mm.png" alt="">
+          <!-- <img class="h-10" src="/images/mm.png" alt=""> -->
         </div>
         <div class="main-logo my-20 overflow-hidden ">
           <img class="object-contain h-full w-full" src="/images/printworks-mainlogo.png" alt="">
@@ -119,22 +127,73 @@
           <p class="text-3xl text-brown">Crafting Souvenirs & Giveaways </p>
            <p class="text-3xl text-brown">for your most special moments.</p>
         </div>
-        <button class="order bg-white px-4 py-2 my-20 text-xl rounded-3xl text-brown">
+        <button class="transition duration-300 ease-in-out order font-semibold hover:shadow-lg opacity-80 hover:opacity-100 bg-white px-4 py-2 my-20 text-xl rounded-3xl text-brown">
           ORDER NOW
         </button>
-        <div class="icons">
-          <div class="mx-auto">
-            <a href="#" class="pl-2 text-3xl text-brown"><span class="icon-facebook"></span></a>
-            <a href="#" class=" pl-2 text-3xl text-brown"><span class="icon-instagram"></span></a>
-            <a href="#" class="pl-2 text-3xl text-brown"><span class="icon-twitter"></span></a>
+        <div class="icons mb-10">
+          <div class="mx-auto flex flex-row">
+            <a href="#" class="text-brown hover:text-white opacity-80 hover:opacity-100 ">
+              <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 448 512"><path fill="currentColor" d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48c27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48"/></svg>
+            </a>
+            <a href="#" class=" hover:text-white mx-3 opacity-80 hover:opacity-100 text-5xl text-brown"><span class="icon-instagram"></span></a>
+            <a href="#" class=" hover:text-white text-brown opacity-80 hover:opacity-100"><span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 24 24"><path fill="currentColor" d="M15.941 17.963c.23-1.879-.98-3.077-4.175-4.097c-1.548-.528-2.277-1.22-2.26-2.171c.065-1.056 1.048-1.825 2.352-1.85a5.29 5.29 0 0 1 2.883.89c.116.072.197.06.263-.04c.09-.144.315-.493.39-.62c.051-.08.061-.186-.068-.28c-.185-.137-.704-.415-.983-.532a6.47 6.47 0 0 0-2.511-.514c-1.91.008-3.413 1.215-3.54 2.826c-.081 1.163.495 2.107 1.73 2.827c.263.152 1.68.716 2.244.892c1.774.552 2.695 1.542 2.478 2.697c-.197 1.047-1.299 1.724-2.818 1.744c-1.203-.046-2.287-.537-3.127-1.19l-.141-.11c-.104-.08-.218-.075-.287.03c-.05.077-.376.547-.458.67c-.077.108-.035.168.045.234c.35.293.817.613 1.134.775a6.71 6.71 0 0 0 2.829.727a4.905 4.905 0 0 0 2.075-.354c1.095-.465 1.803-1.394 1.945-2.554zM12 1.401c-2.068 0-3.754 1.95-3.833 4.39h7.665C15.751 3.35 14.066 1.4 12 1.4zm7.851 22.598l-.08.001l-15.784-.002c-1.074-.04-1.863-.91-1.971-1.991l-.01-.195l-.707-15.526a.459.459 0 0 1 .45-.494h4.975C6.845 2.568 9.16 0 12 0c2.838 0 5.153 2.569 5.275 5.79h4.968a.459.459 0 0 1 .458.483l-.773 15.588l-.007.131c-.094 1.094-.979 1.977-2.07 2.006z"/></svg>
+            </span>
+            </a>
           </div>
           
         </div>
         <div class="mx-auto pt-10 pb-5">
-          <a href="" class="text-brown text-3xl">
+          <a href="" class="text-brown text-3xl hover:text-white opacity-50">
             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"><g transform="rotate(-90 12 12)"><g fill="none" stroke="currentColor" stroke-dasharray="10" stroke-dashoffset="10" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M5 12L12 5M5 12L12 19"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.3s" values="10;0"/></path><path d="M11 12L18 5M11 12L18 19"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.3s" dur="0.3s" values="10;0"/></path></g></g></svg>
           </a>
         </div>
+      </div>
+    </div>
+
+    <div class="py-20 my-20 bg-black bg-opacity-5 ">
+      <div class="container m-auto px-6 mx">
+    
+       <div class="lg:flex justify-between items-center">
+           <div class="lg:w-6/12 lg:p-0 p-7">
+              <h1 class="text-4xl font-bold TheSeasons mb-5 capitalize">Who are we?</h1>
+              <p class="text-2xl font-semibold text-brown">Welcome to Printworks, where creativity meets craftsmanship in the realm of printing services and bespoke souvenirs. </p>
+              <p class="text-xl text-brown"><br>At Printworks, we're not just about ink on paper; we're artisans dedicated to transforming ideas into aesthetically pleasing, minimalist, and meticulously detailed pieces that leave an indelible mark. With a relentless passion for precision and an unwavering dedication to innovation, we specialize in delivering top-notch printing solutions tailored explicitly to meet your needs.</p>
+              <div class="py-5 flex-row flex gap-3">
+                    <a href="" class="transition duration-300 ease-in-out hover:opacity-100 hover:shadow-md opacity-80 bg-green-600 py-2 px-3 font-semibold rounded-full text-white">View our catalog</a>
+                   <a href="" class="transition duration-300 ease-in-out hover:opacity-100 hover:shadow-md opacity-80 border-2 border-white py-2 px-3 rounded-full text-white hover:text-white font-semibold">More about us</a>
+              </div>
+    
+            </div>
+            <div class="lg:w-5/12 order-2  ">
+              <img src="images/pr1.jpg"
+              style="transform: scale(1) perspective(1040px) rotateY(-11deg) rotateX(2deg) rotate(2deg);" alt="" 
+              class="rounded shadow-md opacity-80 hover:opacity-100 transition-transform duration-300 ease-in-out hover:scale-110" />
+            </div>
+            <!-- <div class="lg:w-5/12 order-2 relative overflow-hidden">
+              <img src="images/pr1.jpg"
+                  alt="Your Image"
+                  class="rounded shadow-md opacity-80 hover:opacity-100 transform transition-transform duration-300 ease-in-out hover:scale-110" />
+          </div> -->
+        </div>
+    
+      </div>
+    </div>
+
+    <div class=" h-full ">
+      <div class="flex flex-col justify-content items-center align-center text-center  relative">
+        <div class="mm flex justify-content items-center align-center text-center">
+          mm
+        </div>
+        <!-- <div class="main-logo overflow-hidden ">
+          <img class="object-contain h-full w-full" src="/images/printworks-mainlogo.png" alt="">
+        </div> -->
+        <div class="intro">
+
+        </div>
+        <button class="order">
+
+        </button>
       </div>
     </div>
 
@@ -158,10 +217,6 @@
   
 
 
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.sticky.js"></script>
-    <script src="js/main.js"></script>
+    
   </body>
 </html>
