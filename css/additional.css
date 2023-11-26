@@ -1,0 +1,73 @@
+@font-face {
+    font-family: 'TheSeasons'; /* Specify the font family name */
+    src: url('/fonts/Fontspring-DEMO-theseasons-reg.otf') format('opentype'); /* Path to your font file */
+    /* You can also include font-weight and font-style if applicable */
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'TTCommons'; /* Specify the font family name */
+    src: url('/fonts/Fontspring-DEMO-tt_commons_pro_expanded_regular.otf') format('opentype'); /* Path to your font file */
+    /* You can also include font-weight and font-style if applicable */
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'TTCommons-bold'; /* Specify the font family name */
+    src: url('/fonts/Fontspring-DEMO-tt_commons_pro_expanded_bold.otf') format('opentype'); /* Path to your font file */
+    /* You can also include font-weight and font-style if applicable */
+    font-weight:bold;
+    font-style:normal;
+  }
+
+
+    .main-logo {
+      height: 65px;
+      width: auto; /* To maintain aspect ratio */
+      
+    }
+    .mini-logo {
+      height: 50px;
+    }
+
+    @media (min-width: 1000px) {
+      .main-logo {
+        height: 150px;
+      }
+    }
+
+    @media (max-width: 999px) and (min-width: 600px) {
+      .main-logo {
+        height: 90px;
+      }
+    }
+
+    
+  
+
+  body {
+    background-image: url('/images/creambrownbg.png');
+    background-color: #ad9e8e; /* Fallback color if the image fails to load */
+    background-size: cover; /* Cover the entire screen */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    background-attachment: fixed; /* Keeps the background fixed while scrolling */
+    /* You can adjust other properties based on your design needs */
+  }
+
+  .TTCommons {
+    font-family: TTCommons;
+  }
+
+  .TTCommons-bold {
+    font-family: TTCommons-bold ;
+  }
+
+  .TheSeasons {
+    font-family: TheSeasons;
+  }
+
+  .text-brown {
+    color: #69443C;
+  }
