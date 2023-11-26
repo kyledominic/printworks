@@ -20,6 +20,10 @@
     <link rel="stylesheet" href="css/additional.css">
     <link rel="stylesheet" href="css/additional2.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" />
+    <link
+  href="https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/keen-slider.min.css"
+  rel="stylesheet"
+/>
     
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     <script src="js/jquery-3.3.1.min.js"></script>
@@ -86,16 +90,16 @@
                   <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3"></span></a></div>
 
                   <ul class="site-menu main-menu js-clone-nav d-none d-lg-block">
-                    <li ><a href="#home" class="nav-link">Home</a></li>
-                    <li><a href="#intro-about" class="nav-link">About</a></li>
                     
-                    <li><a href="#services" class="nav-link">Services</a></li>
+
                     <li class="has-children">
-                      <a href="#" class="nav-link">Pages</a>
+                      <a href="#home" class="nav-link">Home</a>
                       <ul class="dropdown arrow-top">
-                        <li><a href="#" class="nav-link">Team</a></li>
-                        <li><a href="#" class="nav-link">Pricing</a></li>
-                        <li><a href="#" class="nav-link">FAQ</a></li>
+                        <li><a href="#intro-about" class="nav-link">About</a></li>
+                        <li><a href="#services" class="nav-link">Services</a></li>
+                        <li><a href="#featured" class="nav-link">Featured</a></li>
+                        <li><a href="#faqs" class="nav-link">FAQs</a></li>
+                        <li><a href="#reviews" class="nav-link">Reviews</a></li>
                         <li class="has-children">
                           <a href="#">More Links</a>
                           <ul class="dropdown">
@@ -106,8 +110,10 @@
                         </li>
                       </ul>
                     </li>
-                    <li><a href="#gallery-section" class="nav-link">Gallery</a></li>
-                    <li><a href="#contact-section" class="nav-link">Contact</a></li>
+
+                    <li><a href="#" class="nav-link">Catalog</a></li>
+                    <li><a href="#" class="nav-link">Gallery</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
                   </ul>
                 </div>
               </nav>
@@ -434,24 +440,24 @@
   </div>
 
 
-  <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+  <div id="featured" class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
     <div class="flex flex-col pb-10 mb-10 lg:justify-between lg:flex-row md:mb-10">
       <p class="inline-block mb-5 font-semibold text-white animate-box">
         Featured ⸻
       </p>
       <h2 class="max-w-lg mb-5 TheSeasons text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none md:mb-6 group">
-        <span class="inline-block mb-1 sm:mb-4">
+        <span class="text-brown inline-block mb-1 sm:mb-4 animate-box">
           Our Latest Projects
         </span>
-        <div class="h-1 ml-auto duration-300 origin-left transform bg-deep-purple-accent-400 scale-x-30 group-hover:scale-x-100"></div>
+        <div class="animate-box h-1 ml-auto duration-300 origin-left transform bg-deep-purple-accent-400 scale-x-30 group-hover:scale-x-100"></div>
       </h2>
-      <p class="text-brown font-semibold lg:max-w-md">
+      <p class="text-brown font-semibold lg:max-w-md animate-box">
         Explore our latest projects, where innovation meets creativity. Each endeavor embodies our commitment to pushing boundaries, delivering excellence, and crafting solutions that inspire.
       </p>
     </div>
-    <div class="grid gap-6 row-gap-5 mb-8 lg:grid-cols-4 sm:row-gap-6 sm:grid-cols-2">
+    <div class="animate-box grid gap-6 row-gap-5 mb-8 lg:grid-cols-4 sm:row-gap-6 sm:grid-cols-2">
       <a href="/" aria-label="View Item">
-        <div class="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
+        <div class="animate-box relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
           <img class="object-cover w-full h-56 md:h-64 xl:h-80" src="/images/pr1.jpg" alt="" />
           <div class="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-75 opacity-0 hover:opacity-100">
             <p class="mb-4 text-lg font-bold text-gray-100">Mona Lisa</p>
@@ -462,7 +468,7 @@
         </div>
       </a>
       <a href="/" aria-label="View Item">
-        <div class="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
+        <div class="animate-box relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
           <img class="object-cover w-full h-56 md:h-64 xl:h-80" src="images/pr1a.jpg" alt="" />
           <div class="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-75 opacity-0 hover:opacity-100">
             <p class="mb-4 text-lg font-bold text-gray-100">The Starry Night</p>
@@ -473,7 +479,7 @@
         </div>
       </a>
       <a href="/" aria-label="View Item">
-        <div class="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
+        <div class="animate-box relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
           <img class="object-cover w-full h-56 md:h-64 xl:h-80" src="images/pr1b.jpg" alt="" />
           <div class="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-75 opacity-0 hover:opacity-100">
             <p class="mb-4 text-lg font-bold text-gray-100">The Kiss</p>
@@ -484,7 +490,7 @@
         </div>
       </a>
       <a href="/" aria-label="View Item">
-        <div class="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
+        <div class="animate-box relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
           <img class="object-cover w-full h-56 md:h-64 xl:h-80" src="images/pr1c.jpg" alt="" />
           <div class="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-75 opacity-0 hover:opacity-100">
             <p class="mb-4 text-lg font-bold text-gray-100">The Harvesters</p>
@@ -505,23 +511,435 @@
     </div>
   </div>
 
-    <div class=" h-full bg-white">
-      <div class="flex flex-col justify-content items-center align-center text-center  relative">
-        <div class="mm flex justify-content items-center align-center text-center">
-          mm
+  <!-- FAQs -->
+  <div id="faqs" class="bg-white py-20 ">
+    <p class="mb-5 font-semibold text-lightbrown text-center animate-box">
+        ⸻ FAQs ⸻
+    </p>
+    <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+        <div class="max-w-xl sm:mx-auto lg:max-w-2xl ">
+            <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+                <h2 class="animate-box max-w-lg mb-6 TheSeasons text-4xl font-bold leading-none tracking-tight text-lightbrown sm:text-4xl md:mx-auto">
+                    <span class="relative inline-block">
+                        <svg viewBox="0 0 52 24" fill="currentColor" class="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-blue-gray-100 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block">
+                            <defs>
+                                <pattern id="f77828ea-acc7-4b05-89fe-052b4c6b68b2" x="0" y="0" width=".135" height=".30">
+                                    <circle cx="1" cy="1" r=".7"></circle>
+                                </pattern>
+                            </defs>
+                            <rect fill="url(#f77828ea-acc7-4b05-89fe-052b4c6b68b2)" width="52" height="24"></rect>
+                        </svg>
+                        <span class="relative">Frequently</span>
+                    </span>
+                    Asked Questions
+                </h2>
+                <p class="animate-box text-base text-brown font-semibold md:text-lg my-10">Got questions? We've got answers!<br>Check out our FAQs below for quick insights.</p>
+            </div>
+            <div class="space-y-4 animate-box">
+                <div class="border-b pb-2">
+                    <button type="button" aria-label="Open item" title="Open item" class="flex items-center justify-between w-full p-2 focus:outline-none" onclick="toggleAccordion(this)">
+                        <p class="text-lg font-medium text-brown">What printing services do you offer?</p>
+                        <svg viewBox="0 0 24 24" class="w-3 text-lightbrown transition-transform duration-200">
+                            <polyline fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" points="2,7 12,17 22,7" stroke-linejoin="round"></polyline>
+                        </svg>
+                    </button>
+                    <div class="p-4 pt-0 hidden"><p class="text-brown">We provide a comprehensive range of printing services, including tarpaulin printing, t-shirt printing, UV Printing, and specialty printing for various needs.</p></div>
+                </div>
+                <div class="border-b pb-2">
+                    <button type="button" aria-label="Open item" title="Open item" class="flex items-center justify-between w-full p-2 focus:outline-none" onclick="toggleAccordion(this)">
+                        <p class="text-lg font-medium text-brown">What printing services do you offer?</p>
+                        <svg viewBox="0 0 24 24" class="w-3 text-lightbrown transition-transform duration-200">
+                            <polyline fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" points="2,7 12,17 22,7" stroke-linejoin="round"></polyline>
+                        </svg>
+                    </button>
+                    <div class="p-4 pt-0 hidden"><p class="text-brown">We provide a comprehensive range of printing services, including tarpaulin printing, t-shirt printing, UV Printing, and specialty printing for various needs.</p></div>
+                </div>
+                <div class="border-b pb-2">
+                  <button type="button" aria-label="Open item" title="Open item" class="flex items-center justify-between w-full p-2 focus:outline-none" onclick="toggleAccordion(this)">
+                      <p class="text-lg font-medium text-brown">What printing services do you offer?</p>
+                      <svg viewBox="0 0 24 24" class="w-3 text-lightbrown transition-transform duration-200">
+                          <polyline fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" points="2,7 12,17 22,7" stroke-linejoin="round"></polyline>
+                      </svg>
+                  </button>
+                  <div class="p-4 pt-0 hidden"><p class="text-brown">We provide a comprehensive range of printing services, including tarpaulin printing, t-shirt printing, UV Printing, and specialty printing for various needs.</p></div>
+              </div>
+              <div class="border-b pb-2">
+                <button type="button" aria-label="Open item" title="Open item" class="flex items-center justify-between w-full p-2 focus:outline-none" onclick="toggleAccordion(this)">
+                    <p class="text-lg font-medium text-brown">What printing services do you offer?</p>
+                    <svg viewBox="0 0 24 24" class="w-3 text-lightbrown transition-transform duration-200">
+                        <polyline fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" points="2,7 12,17 22,7" stroke-linejoin="round"></polyline>
+                    </svg>
+                </button>
+                <div class="p-4 pt-0 hidden"><p class="text-brown">We provide a comprehensive range of printing services, including tarpaulin printing, t-shirt printing, UV Printing, and specialty printing for various needs.</p></div>
+            </div>
+                
+                
+                
+            </div>
         </div>
-        <!-- <div class="main-logo overflow-hidden ">
-          <img class="object-contain h-full w-full" src="/images/printworks-mainlogo.png" alt="">
-        </div> -->
-        <div class="intro">
+    </div>
+</div>
 
+
+  <!-- reviews -->
+  <section id="reviews" class="bg-transparent pb-10">
+    <div
+      class="mx-auto max-w-[1340px] px-4 py-12 sm:px-6 lg:me-0 lg:py-16 lg:pe-0 lg:ps-8 xl:py-24 container"
+    >
+    <p class="inline-block mb-5 font-semibold text-white animate-box">
+      Reviews ⸻
+    </p>
+      <div class="max-w-7xl items-end justify-between sm:flex sm:pe-6 lg:pe-8">
+        
+        <h2
+          class="animate-box max-w-xl text-4xl font-bold TheSeasons tracking-tight text-brown sm:text-5xl"
+        >
+          Customer Reviews
+        </h2>
+        
+        <div class="mt-8 flex gap-4 lg:mt-0 animate-box">
+          <button
+            aria-label="Previous slide"
+            id="keen-slider-previous"
+            class="rounded-full border border-white p-3 text-brown transition hover:text-white"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="h-5 w-5 rtl:rotate-180"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15.75 19.5L8.25 12l7.5-7.5"
+              />
+            </svg>
+          </button>
+  
+          <button
+            aria-label="Next slide"
+            id="keen-slider-next"
+            class="rounded-full border border-white p-3 text-brown transition  hover:text-white"
+          >
+            <svg
+              class="h-5 w-5 rtl:rotate-180"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9 5l7 7-7 7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+            </svg>
+          </button>
+          
         </div>
-        <button class="order">
+        
+      </div>
+      <p class="text-brown font-semibold text-lg my-10 animate-box">
+        Don't just take our word for it.. <br> Read our customers heartfelt reviews.
+      </p>
+      <div class="-mx-6 mt-8 lg:col-span-2 lg:mx-0 animate-box">
+        <div id="keen-slider" class="keen-slider">
 
-        </button>
+          <div class="keen-slider__slide rounded-xl overflow-hidden">
+            <img class="h-full" src="/images/rev-1.jpg" alt="">
+          </div>
+          
+          <div class="keen-slider__slide rounded-xl overflow-hidden">
+            <img class="h-full" src="/images/rev-2.jpg" alt="">
+          </div>
+          <div class="keen-slider__slide rounded-xl overflow-hidden">
+            <img class="h-full" src="/images/rev-3.jpg" alt="">
+          </div>
+          <div class="keen-slider__slide rounded-xl overflow-hidden">
+            <img class="h-full" src="/images/rev-4.jpg" alt="">
+          </div>
+          <div class="keen-slider__slide rounded-xl overflow-hidden">
+            <img class="h-full" src="/images/rev-5.jpg" alt="">
+          </div>
+          <div class="keen-slider__slide rounded-xl overflow-hidden">
+            <img class="h-full" src="/images/rev-6.jpg" alt="">
+          </div>
+          
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+    
+    <!-- contact -->
+    <div id="contact" class="overflow-hidden bg-transparent py-20">
+      <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+        <div class="flex flex-row items-center justify-between sm:flex-col ">
+          <div class="w-full max-w-xl mb-12 xl:pr-16 xl:mb-0 xl:w-7/12 animate-box">
+            <p class="inline-block mb-5 font-semibold text-white animate-box">
+              Contact ⸻
+            </p>
+            <h2 class="animate-box max-w-lg mb-6 TheSeasons text-3xl font-bold tracking-tight text-brown sm:text-4xl sm:leading-none">
+              Got a question or need assistance? <br class="hidden md:block" />
+              We are just a message away</span>
+               
+            </h2>
+            <p class="max-w-xl mb-2 mt-4 text-xl text-brown  md:text-lg">
+              Reach out to us via email or phone:
+            </p>
+            <div class="flex flex-col gap-3">
+              <a href="/" aria-label="" class="inline-flex  items-center font-semibold tracking-wider transition-colors duration-200 text-brown hover:text-white">
+                <iconify-icon class="mr-2" icon="ic:baseline-email" width="30" height="30"></iconify-icon>
+                teeworkzph.customprints@gmail.com
+              </a>
+              <a href="/" aria-label="" class="inline-flex items-center font-semibold tracking-wider transition-colors duration-200 text-brown hover:text-white">
+                <iconify-icon class="mr-2" icon="bi:phone" width="30" height="30"></iconify-icon>
+                +63 943 071 4617
+              </a>
+              <a href="/" aria-label="" class="inline-flex text-sm items-center font-semibold tracking-wider transition-colors duration-200 text-brown hover:text-white">
+                <iconify-icon class="mr-2" icon="ion:location-sharp" width="30" height="30"></iconify-icon>
+                Phase 1 Package 3 Block 48 Lot 4 <br>Bagong Silang Caloocan City
+              </a>
+            </div>
+
+            <p class="max-w-xl mb-2 mt-4 text-xl text-brown  md:text-lg">
+              For the latest updates, printing tips, and more, connect with us on our social platforms:
+            </p>
+            <div class="flex flex-col gap-3">
+              <a href="/" aria-label="" class="inline-flex  items-center font-semibold tracking-wider transition-colors duration-200 text-brown hover:text-white">
+                <iconify-icon class="mr-2" icon="ic:baseline-facebook" width="30" height="30"></iconify-icon>
+                Facebook 
+              </a>
+              <a href="/" aria-label="" class="inline-flex items-center font-semibold tracking-wider transition-colors duration-200 text-brown hover:text-white">
+                <iconify-icon class="mr-2" icon="mdi:instagram" width="30" height="30"></iconify-icon>
+                Instagram 
+              </a>
+              <a href="/" aria-label="" class="inline-flex  items-center font-semibold tracking-wider transition-colors duration-200 text-brown hover:text-white">
+                <iconify-icon class="mr-2" icon="tabler:brand-shopee" width="30" height="30"></iconify-icon>
+                Shopee PH 
+              </a>
+            </div>
+          </div>
+          <div class="w-full max-w-xl xl:px-8 xl:w-5/12 animate-box">
+            <div class="relative">
+              <svg viewBox="0 0 52 24" fill="currentColor" class="absolute bottom-0 right-0 z-0 hidden w-32 -mb-8 -mr-20 text-teal-accent-400 lg:w-32 lg:-mr-16 sm:block">
+                <defs>
+                  <pattern id="766323e1-e594-4ffd-a688-e7275079d540" x="0" y="0" width=".135" height=".30">
+                    <circle cx="1" cy="1" r=".7"></circle>
+                  </pattern>
+                </defs>
+                <rect fill="url(#766323e1-e594-4ffd-a688-e7275079d540)" width="52" height="24"></rect>
+              </svg>
+              <div class="relative rounded shadow-2xl overflow-hidden animate-box ">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15431.716560551064!2d121.0455461!3d14.7730213!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397aff22d939f53%3A0x7a1f539111751891!2sThe%20Trendy%20Home%20PH!5e0!3m2!1sfil!2sph!4v1701034655785!5m2!1sfil!2sph"
+                 width="550" height="550" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     
+    <!-- footer -->
+    <footer class="bg-lightbrown text-white">
+      <div
+        class="mx-auto max-w-screen-xl space-y-8 px-4 py-16 sm:px-6 lg:space-y-16 lg:px-8"
+      >
+        <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
+          <div>
+            <div class="">
+              <img class="h-10" src="/images/printworks-mainlogo-white.png" alt="">
+            </div>
+    
+            <p class="mt-4 max-w-xs text-lg text-white">
+              Got projects or questions? Feel free to reach us out thru our socials.
+            </p>
+    
+            <ul class="mt-8 flex gap-6">
+              <li>
+                <a
+                  href="/"
+                  rel="noreferrer"
+                  target="_blank"
+                  class="text-white transition hover:opacity-75"
+                >
+                  <span class="sr-only">Facebook</span>
+    
+                  <svg
+                    class="h-7 w-7"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </a>
+              </li>
+    
+              <li>
+                <a
+                  href="/"
+                  rel="noreferrer"
+                  target="_blank"
+                  class="text-white transition hover:opacity-75"
+                >
+                  <span class="sr-only">Instagram</span>
+    
+                  <svg
+                    class="h-7 w-7"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </a>
+              </li>
+    
+              <li>
+                <a
+                  href="/"
+                  rel="noreferrer"
+                  target="_blank"
+                  class="text-white transition hover:opacity-75"
+                >
+                  <span class="sr-only">Twitter</span>
+    
+                  <svg
+                    class="h-7 w-7"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"
+                    />
+                  </svg>
+                </a>
+              </li>
+    
+            </ul>
+          </div>
+    
+          <div
+            class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-4"
+          >
+            <div>
+              <p class="font-medium text-white">Home</p>
+    
+              <ul class="mt-6 space-y-4 text-sm">
+                <li>
+                  <a href="#" class="text-white transition hover:opacity-75">
+                    About
+                  </a>
+                </li>
+    
+                <li>
+                  <a href="#" class="text-white transition hover:opacity-75">
+                    Services
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="text-white transition hover:opacity-75">
+                    Featured
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="text-white transition hover:opacity-75">
+                    FAQs
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="text-white transition hover:opacity-75">
+                    Reviews
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="text-white transition hover:opacity-75">
+                    Contact
+                  </a>
+                </li>
+              </ul>
+            </div>
+    
+            <div>
+              <p class="font-medium text-white">Catalog</p>
+    
+              <ul class="mt-6 space-y-4 text-sm">
+                <li>
+                  <a href="#" class="text-white transition hover:opacity-75">
+                    Printing
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="text-white transition hover:opacity-75">
+                    Souvenirs
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="text-white transition hover:opacity-75">
+                    Giveaways
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="text-white transition hover:opacity-75">
+                    Prices
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="text-white transition hover:opacity-75">
+                    Promos
+                  </a>
+                </li>
+              </ul>
+            </div>
+    
+            <div>
+              <p class="font-medium text-white">Contact Us</p>
+    
+              <ul class="mt-6 space-y-4 text-sm">
+                <li>
+                  <a href="#" class="text-white transition hover:opacity-75">
+                    Email: <br> teeworkzph.customprints@gmail.com
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="text-white transition hover:opacity-75">
+                    Location: <br> North Caloocan, Metro Manila, Philippines
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="text-white transition hover:opacity-75">
+                    Contact No.: <br>
+                    +63 943 071 4617
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <p class="text-sm text-white">
+          &copy; 2023. Prinworks. All rights reserved.
+        </p>
+        <!-- <p class="text-sm text-white">
+          &copy; Website created by: Dominic Lopez
+        </p> -->
+      </div>
+    </footer>
   
     <script>
    // Select all navigation links
@@ -586,8 +1004,55 @@ document.addEventListener('DOMContentLoaded', function() {
   window.addEventListener('scroll', animateElements);
 });
 
-
+  
     </script>
+    <script type="module">
+      import KeenSlider from 'https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/+esm'
+    
+      const keenSlider = new KeenSlider(
+        '#keen-slider',
+        {
+          loop: true,
+          slides: {
+            origin: 'center',
+            perView: 1.25,
+            spacing: 16,
+          },
+          breakpoints: {
+            '(min-width: 1024px)': {
+              slides: {
+                origin: 'auto',
+                perView: 2.5,
+                spacing: 32,
+              },
+            },
+          },
+        },
+        []
+      )
+    
+      const keenSliderPrevious = document.getElementById('keen-slider-previous')
+      const keenSliderNext = document.getElementById('keen-slider-next')
+    
+      keenSliderPrevious.addEventListener('click', () => keenSlider.prev())
+      keenSliderNext.addEventListener('click', () => keenSlider.next())
+    </script>
+
+<script>
+  function toggleAccordion(button) {
+      const content = button.nextElementSibling;
+      const icon = button.querySelector('svg');
+  
+      content.classList.toggle('hidden');
+      content.classList.toggle('transition-max-h'); // Toggle transition class
+  
+      if (content.classList.contains('hidden')) {
+          icon.classList.remove('rotate-180');
+      } else {
+          icon.classList.add('rotate-180');
+      }
+  }
+  </script>
 
     
   </body>
