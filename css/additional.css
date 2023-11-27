@@ -200,17 +200,24 @@
       height: 50px;
     }
 
-    @media (min-width: 1000px) {
-      .main-logo {
-        height: 150px;
-      }
-    }
+    /* Media queries */
+@media (max-width: 999px) and (min-width: 600px) {
+  .main-logo {
+    height: 90px;
+  }
+}
 
-    @media (max-width: 999px) and (min-width: 600px) {
-      .main-logo {
-        height: 90px;
-      }
-    }
+@media (min-width: 1280px) {
+  .main-logo {
+    height: 120px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .main-logo {
+    height: 150px;
+  }
+}
 
     
   
