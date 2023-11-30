@@ -1189,6 +1189,25 @@ function initializePage() {
 
   sortAZBtn.addEventListener('click', () => sortAndPopulateCardsByTitle(cardData, 'ascending'));
   sortZABtn.addEventListener('click', () => sortAndPopulateCardsByTitle(cardData, 'descending'));
+
+  const searchInput = document.getElementById('searchInput');
+
+  searchInput.addEventListener('input', () => {
+    const searchQuery = searchInput.value.toLowerCase().trim();
+    const selectedTag = document.querySelector('#tagButtons button.bg-gray-100')?.textContent; // Get the currently active tag, if any
+
+    let filteredCards = cardData.filter(card =>
+      (card.title.toLowerCase().includes(searchQuery) ||
+        card.description.toLowerCase().includes(searchQuery)) &&
+      (!selectedTag || card.tags.includes(selectedTag))
+    );
+
+    if (searchQuery === '' && !selectedTag) {
+      filteredCards = cardData; // If both search and tag are empty, show all cards
+    }
+
+    populateCards(filteredCards);
+  });
 }
 
 // Call the function to initialize the page
