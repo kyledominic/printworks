@@ -19,6 +19,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/keen-slider.min.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
     <link rel="stylesheet" href="css/additional.css">
     
     <!-- Iconify and jQuery -->
@@ -30,8 +31,10 @@
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.sticky.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/glide.min.js"></script>
     <script src="js/main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
+    
     
     <title>Printworks</title>
 </head>
@@ -946,12 +949,17 @@ instances.forEach(function(instance) {
     <script>
       const cardData = [
   {
-    imageUrl: '/images/pr1.jpg',
-    title: 'Something giveaway',
+    imageUrl: './images/pr1.jpg',
+    title: 'Something giveaway22',
     description: 'wedding something something something',
     price: '100',
     tags: ['all' , 'cups', 'gift', 'giveaway'],
     shopee: 'https://www.facebook.com',
+    images: [
+    './images/pr1.jpg',
+    './images/pr1a.jpg',
+    './images/pr1b.jpg',
+  ],
   },
   {
     imageUrl: '/images/pr1a.jpg',
@@ -960,6 +968,12 @@ instances.forEach(function(instance) {
     price: '222',
     tags: ['all' ,'souvenir', 'gift', 'giveaway'],
     shopee: 'https://www.facebook.com',
+    images: [
+    './images/pr1c.jpg',
+    './images/pr2.jpg',
+    './images/pr3.jpg',
+    './images/pr1b.jpg',
+  ],
   },
   {
     imageUrl: '/images/pr1b.jpg',
@@ -1039,21 +1053,87 @@ instances.forEach(function(instance) {
 // Function to populate the card container with dynamic cards
 function createCard(card) {
   const cardElement = document.createElement('div');
-  cardElement.className = 'bg-white transform hover:scale-105 ease-in-out transition duration-500 shadow-md rounded-md overflow-hidden max-w-sm mx-auto mb-4 pb-2';
+  cardElement.className =
+    'bg-white transform hover:scale-105 ease-in-out transition duration-500 shadow-md hover:shadow-lg rounded-md overflow-hidden max-w-sm mx-auto mb-4 pb-2 cursor-pointer flex flex-col';
 
   cardElement.innerHTML = `
     <img src="${card.imageUrl}" alt="Card Image" class="w-full h-48 object-cover mb-2">
-    <div class="px-3 pb-1">
+    <div class="px-3 pb-1 flex-1">
       <h2 class="text-xl font-semibold mb-1">${card.title}</h2>
       <p class="text-gray-600">${card.description}</p>
       <div class="flex flex-row justify-between mt-1">
-        <p class="text-gray-800 font-semibold ">P${card.price}</p>
-        <a class="text-white font-semibold bg-red-300 hover:bg-red-500 cursor-pointer text-sm p-1 px-2 items-center rounded-lg">order now</a>
-        
+        <p class="text-gray-800 font-semibold">P${card.price}</p>
       </div>
-      
     </div>
+    <a href="https://www.shopee.ph" target="_blank" class="text-white font-semibold bg-red-300 hover:bg-red-500 cursor-pointer mr-2 text-sm p-1 px-2 items-center rounded-lg mt-auto self-end">order now</a>
   `;
+
+  cardElement.addEventListener('click', () => {
+    const modal = document.createElement('div');
+    modal.className =
+      'fixed top-0 left-0 flex items-center justify-center w-full h-full bg-gray-800 bg-opacity-50 z-50 opacity-0 transition-opacity duration-300';
+    modal.innerHTML = `
+      <div class="bg-white grid grid-cols-1 md:grid-cols-2 gap-4 p-4 shadow-md rounded-md overflow-hidden max-w-5xl relative mx-3">
+        <span class="absolute top-2 right-2 cursor-pointer text-gray-500 hover:text-gray-700 text-2xl" onclick="this.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode)">
+          &times;
+        </span>
+        <div class="relative">
+          <div class="">
+            <img src="${card.images[0]}" alt="Product Image" class="w-full h-96 object-cover mb-2 rounded modal-main-image" >
+            </div>
+         
+          <div class=" absolute bg-black bg-opacity-30 bottom-0 left-0 right-0 flex justify-center space-x-2 py-2 navigators">
+            ${card.images
+              .map(
+                (image, index) => `
+                  <img src="${image}" alt="Product Image" class="w-14 h-14 object-cover rounded cursor-pointer ${
+                  index === 0 ? 'border-2 border-blue-500' : ''
+                }" data-index="${index}">
+                `
+              )
+              .join('')}
+          </div>
+        </div>
+        <div class="flex flex-col justify-center">
+          <h2 class="text-3xl font-semibold mb-4">${card.title}</h2>
+          <p class="text-gray-600 mb-4">${card.description}</p>
+          <p class="text-gray-800 font-semibold mb-2">Price: P${card.price}</p>
+          <button class="mt-auto text-white font-semibold bg-red-500 hover:bg-red-700 cursor-pointer text-sm p-2 px-4 rounded-lg">Order Now</button>
+        </div>
+      </div>
+    `;
+
+    const navigators = modal.querySelectorAll('.navigators img');
+    const mainImage = modal.querySelector('.modal-main-image');
+
+    navigators.forEach((navigator) => {
+      navigator.addEventListener('click', () => {
+        mainImage.src = navigator.src;
+        navigators.forEach((nav) => nav.classList.remove('border-2', 'border-blue-500'));
+        navigator.classList.add('border-2', 'border-blue-500');
+      });
+    });
+
+    const closeModal = () => {
+      modal.classList.add('opacity-0');
+      setTimeout(() => {
+        document.body.removeChild(modal);
+      }, 300);
+    };
+
+    modal.addEventListener('click', (event) => {
+      if (event.target.classList.contains('bg-gray-800')) {
+        closeModal();
+      }
+    });
+
+    document.body.appendChild(modal);
+
+    // Allow the browser to paint before adding the class to trigger the animation
+    setTimeout(() => {
+      modal.classList.add('opacity-100');
+    }, 50);
+  });
 
   return cardElement;
 }
