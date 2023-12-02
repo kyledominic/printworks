@@ -95,7 +95,7 @@
                     
 
                     <li class="has-children">
-                      <a href="" class="">Home</a>
+                      <a class="">Home</a>
                       <ul class="dropdown arrow-top">
                         <li><a href="index.html#intro-about" class="text-brown">About</a></li>
                         <li><a href="index.html#services" class=" text-brown">Services</a></li>
@@ -115,11 +115,12 @@
                     </li>
 
                     <li class="has-children">
-                      <a href="" class="">Catalog</a>
+                      <a class="">Catalog</a>
                       <ul class="dropdown arrow-top">
-                        <li><a href="#home" class="nav-link text-brown">Most Popular</a></li>
-                        <li><a href="#new-products" class="nav-link text-brown">New Products</a></li>
+                        <li><a href="#home" class="nav-link text-brown">Sets & Packages</a></li>
+                        
                         <li><a href="#all-products" class="nav-link text-brown">All Products</a></li>
+                        <li><a href="#promotions" class="nav-link text-brown">Promotions</a></li>
                         
                       </ul>
                     </li>
@@ -168,10 +169,10 @@
                     </div>
     </div>
 
-    <section id="new-products" class="bg-white shadow-lg ">
+    <section id="new-products" class="bg-white shadow-sm ">
       <div class="container py-10 xl:px-10">
         <p class=" font-semibold text-lightbrown text-center animate-box">
-          ⸻ Products ⸻
+          ⸻ Catalog ⸻
       </p>
       <div class="px-4 pt-16 pb-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:pt-20 lg:pb-5">
           <div class="max-w-xl sm:mx-auto lg:max-w-2xl ">
@@ -186,11 +187,13 @@
                               </defs>
                               <rect fill="url(#f77828ea-acc7-4b05-89fe-052b4c6b68b2)" width="52" height="24"></rect>
                           </svg>
-                          <span class="relative">Our</span>
+                          <span class="relative">Sets</span>
                       </span>
-                      Catalog
+                      and Packages
                   </h2>
-                  <p class="animate-box text-base text-brown font-semibold md:text-lg mt-10">Discover the complete range of Printworks' original products.<br> Explore freely to find exactly what you're seeking.</p>
+                  <p class="animate-box text-base text-brown font-semibold md:text-lg mt-10">Explore Printworks' exclusive sets and packages tailored for your needs. 
+                    Highlighting elegance and aesthetic designs to showcase artsy combinations. </p>
+
               </div>
               
           </div>
@@ -199,7 +202,7 @@
           <div class="hs__header flex flex-row justify-between">
             <div class="flex flex-col">
               <h2 class="hs__headline text-2xl font-bold text-lightbrown">⸻</h2>
-            <h2 class="hs__headline text-2xl font-semibold text-brown">Our Newest Products</h2>
+            <h2 class="hs__headline text-2xl font-semibold text-brown">Exclusive Sets</h2>
             </div>
             
             <div class="hs__arrows">
@@ -536,7 +539,7 @@
       </div>
     </div>
 
-    <section id="all-products" class="bg-white shadow-lg ">
+    <section id="all-products" class="bg-white shadow-sm ">
       <div class="container py-10 xl:px-10">
         <p class=" font-semibold text-lightbrown text-center animate-box">
           ⸻ Products ⸻
@@ -558,30 +561,36 @@
                       </span>
                       Products
                   </h2>
-                  <!-- <p class="animate-box text-base text-brown font-semibold md:text-lg mt-10">Discover the complete range of Printworks' original products.<br> Explore freely to find exactly what you're seeking.</p> -->
+                  <p class="animate-box text-base text-brown font-semibold md:text-lg mt-10">Discover the complete range of Printworks' original products.<br> Explore freely to find exactly what you're seeking.</p>
               </div>
               
           </div>
       </div>
+        
+
         <div class="overflow-visible">
           <div class="flex flex-col lg:flex-row justify-between">
             <div class="mb-2 lg:mb-0">
-              <div class="flex flex-col mr-20 xs:mr-0">
-                <h2 class="border-t-2 border-lighterbrown "></h2>
-                <h2 class="text-2xl font-semibold text-brown">All Items</h2>
+              <div class="flex flex-col xs:mr-0">
+                <h2 class="text-lightbrown text-2xl font-bold">⸻</h2>
+                <h2 class="text-2xl font-semibold text-brown ">All Items</h2>
               </div>
             </div>
-            <div class="flex justify-center items-center mb-2 lg:mb-0 lg:ml-4">
-              <div class="flex overflow-x-auto space-x-2" id="tagButtons">
-                <!-- Buttons for filtering tags will be dynamically generated here -->
-              </div>
-            </div>
-            <div class="flex">
-              <input type="text" id="searchInput" placeholder="Search by title or description" class="px-2 mb-2 rounded border">
+            
+            <div class="flex rounded border my-3">
+              <input type="text" id="searchInput" placeholder="Search here" class="pl-2  border-none">
+              <iconify-icon class="text-lightbrown flex align-items-center px-2" icon="tabler:search" width="30" height="30"></iconify-icon>
+            </input>
             </div>
           </div>
           
-          <div class="flex justify-center space-x-2 mb-4">
+          <div class="flex justify-center items-center mb-2 lg:mb-0 lg:ml-4">
+            <div class="flex overflow-x-auto space-x-2" id="tagButtons">
+              <!-- Buttons for filtering tags will be dynamically generated here -->
+            </div>
+          </div>
+          
+          <div class="flex justify-center space-x-2 mb-8">
             <button id="sortByHighest" class="px-3 py-1 bg-green-400 text-white rounded hover:bg-green-600 focus:outline-none transition duration-300 ease-in-out">Sort by Highest Price</button>
             <button id="sortByLowest" class="px-3 py-1 bg-green-400 text-white rounded hover:bg-green-600 focus:outline-none transition duration-300 ease-in-out">Sort by Lowest Price</button>
             <button id="sortAZ" class="px-3 py-1 bg-green-400 text-white rounded hover:bg-green-600 focus:outline-none transition duration-300 ease-in-out">Sort A-Z</button>
