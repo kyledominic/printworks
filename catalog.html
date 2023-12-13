@@ -36,14 +36,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
     
     <style>.slider {
-      width: 200px;
+      width: 450px;
       height: 400px;
       position: relative;
       overflow: hidden;
     }
     
     .slide-ana {
-      height: 360px;
+      height: 400px;
     }
     
     .slide-ana > div {
@@ -557,7 +557,7 @@
     <div id="productModal" class="fixed top-0 left-0 w-full h-full flex items-center justify-center z-50 hidden">
       <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-50"></div>
       <div class="modal-content bg-white rounded-none overflow-hidden shadow-xl flex flex-col justify-center items-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-        <span class="close absolute top-0 right-0 m-4 text-gray-700 cursor-pointer">&times;</span>
+        <span class="close absolute top-0 right-0 text-3xl m-4 text-gray-700 cursor-pointer">&times;</span>
         <div id="modalContent" class=""></div>
       </div>
     </div>
@@ -711,10 +711,10 @@ instances.forEach(function(instance) {
   },
   {
     imageUrl: '/images/pr1a.jpg',
-    title: 'Engrave Wooden Souvenir',
-    description: 'Description for card 2 goes here christian',
+    title: 'Wooden Coaster',
+    description: '• One Side Engrave • Personalized Hangtags • Thank you card • Ribbon (theme) +30 for engrave each side',
     price: '222',
-    tags: ['all' ,'souvenir', 'gift', 'giveaway'],
+    tags: ['all' ,'souvenir', 'wooden', 'giveaway'],
     shopee: 'https://www.facebook.com',
     images: [
     './images/pr1c.jpg',
@@ -809,11 +809,14 @@ function createCard(card) {
     <div class="px-3 pb-1 flex-1">
       <h2 class="text-xl font-semibold mb-1">${card.title}</h2>
       <p class="text-gray-600">${card.description}</p>
-      <div class="flex flex-row justify-between mt-1">
-        <p class="text-gray-800 font-semibold">P${card.price}</p>
-      </div>
+      
     </div>
-    <a href="https://www.shopee.ph" target="_blank" class="text-white font-semibold bg-red-300 hover:bg-red-500 cursor-pointer mr-2 text-sm p-1 px-2 items-center rounded-lg mt-auto self-end">order now</a>
+    <div class="flex flex-row justify-between mt-1 px-3 pb-1">
+        
+        <a href="https://www.shopee.ph" target="_blank" class="text-white font-semibold bg-red-300 hover:bg-red-500 cursor-pointer text-sm p-1 px-2 items-center rounded-lg  ">order now</a>
+        <p class="text-gray-800 font-semibold flex items-center">P${card.price}</p>
+        </div>
+    
   `;
 
   cardElement.addEventListener('click', () => {
@@ -1058,67 +1061,85 @@ initializePage();
       imageSrc: "/images/P1-A.png",
       imageSrc2: "/images/P1-B.png",
       imageSrc3: "/images/P1-C.png",
+      productName: "SET A Engrave Wooden Souvenirs",
+      features: ["2pcs Wooden Mug 150ml","2pcs Wooden Coaster ",
+      "50g Coffee Grounds", "Large Abaca Box" , "Thank You Card" , 
+      "Personalized Hangtags","Ribbon (theme)", "+30 for engrave each side"],
+      price: "P 240-300",
+      shopLinks: {
+        view: "#",
+        shopee: "#"
+      }
+    },
+    {
+      imageSrc: "/images/pr1.jpg",
+      imageSrc2: "/images/P1-B.png",
+      imageSrc3: "/images/P1-C.png",
+      productName: "SET B Engrave Wooden Souvenirs",
+      features: ["Wooden Mug 150ml","Wooden Coaster ",
+      "50g Coffee Grounds", "Medium Abaca Box" , "Thank You Card" , 
+      "Ribbon (theme)", "+30 for engrave each side"],
+      price: "P 240-300",
+      shopLinks: {
+        view: "#",
+        shopee: "#"
+      }
+    },
+    {
+      imageSrc: "/images/P3-A.png",
+      imageSrc2: "/images/pr1b.jpg",
+      imageSrc3: "/images/P1-C.png",
+      productName: "SET C Engrave Wooden Souvenirs",
+      features: ["4x4 Sinamay Bag ", "Thank You Card" , 
+      "Personalized Hangtags","Ribbon (theme)", "+30 for engrave each side"],
+      price: "P 240-300",
+      shopLinks: {
+        view: "#",
+        shopee: "#"
+      }
+    },
+    {
+      imageSrc: "/images/P1-A.png",
+      imageSrc2: "/images/P1-B.png",
+      imageSrc3: "/images/P1-C.png",
+      productName: "SET A Engrave Wooden Souvenirs",
+      features: ["2pcs Wooden Mug 150ml","2pcs Wooden Coaster ",
+      "50g Coffee Grounds", "Large Abaca Box" , "Thank You Card" , 
+      "Personalized Hangtags","Ribbon (theme)", "+30 for engrave each side"],
+      price: "P 240-300",
+      shopLinks: {
+        view: "#",
+        shopee: "#"
+      }
+    },
+    {
+      imageSrc: "/images/P1-A.png",
+      imageSrc2: "/images/P1-B.png",
+      imageSrc3: "/images/P1-C.png",
       productName: "SET A - Engrave Wooden Souvenirs",
-      features: ["2 Sets of Wooden Souvenirs", "Coffee Set", "Abaca Box, and more..."],
+      features: ["2pcs Wooden Mug 150ml","2pcs Wooden Coaster ",
+      "50g Coffee Grounds", "Large Abaca Box" , "Thank You Card" , 
+      "Personalized Hangtags","Ribbon (theme)", "+30 for engrave each side"],
       price: "P 240-300",
       shopLinks: {
         view: "#",
         shopee: "#"
       }
     },
-    {
-      imageSrc: "/images/pr1.jpg",
-      productName: "Wooden something set engrave",
-      features: ["Something", "Something", "Something", "Something"],
-      price: "P 240-300",
-      shopLinks: {
-        view: "#",
-        shopee: "#"
-      }
-    },
-    {
-      imageSrc: "/images/pr1.jpg",
-      productName: "Wooden something set engrave",
-      features: ["Something", "Something", "Something", "Something"],
-      price: "P 240-300",
-      shopLinks: {
-        view: "#",
-        shopee: "#"
-      }
-    },
-    {
-      imageSrc: "/images/pr1.jpg",
-      productName: "Wooden something set engrave",
-      features: ["Something", "Something", "Something", "Something"],
-      price: "P 240-300",
-      shopLinks: {
-        view: "#",
-        shopee: "#"
-      }
-    },
-    {
-      imageSrc: "/images/pr1.jpg",
-      productName: "Wooden something set engrave",
-      features: ["Something", "Something", "Something", "Something"],
-      price: "P 240-300",
-      shopLinks: {
-        view: "#",
-        shopee: "#"
-      }
-    },
+    
+   
     // Add more product objects here as needed
   ];
 
   const productList = document.getElementById("productList");
 
   function generateProductHTML(product) {
-    const featuresHTML = product.features.map(feature => `
-      <div class="flex space-x-1 mb-1 items-center">
-        <iconify-icon icon="simple-line-icons:check" width="20" height="20"></iconify-icon>
-        <p class="ml-2">${feature}</p>
-        
-      </div>
-    `).join('');
+    const featuresHTML = product.features.slice(0, 3).map(feature => `
+  <div class="flex space-x-1 mb-1 items-center">
+    <iconify-icon icon="simple-line-icons:check" width="20" height="20"></iconify-icon>
+    <p class="ml-2">${feature}</p>
+  </div>
+`).join('');
 
     const productHTML = `
       <li class="hs__item">
@@ -1158,8 +1179,35 @@ initializePage();
 
     return productHTML;
   }
+  let currentSlide = 0;
+const totalSlides = 3; // Assuming there are always 3 slides
+
+function goNext() {
+  currentSlide = (currentSlide + 1) % totalSlides;
+  updateSlider();
+}
+
+function goPrev() {
+  currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+  updateSlider();
+}
+
+function updateSlider() {
+  const slides = document.querySelectorAll(".slide-ana>div");
+  slides.forEach((slide, index) => {
+    const distance = 100 * (index - currentSlide);
+    slide.style.transform = `translateX(${distance}%)`;
+  });
+}
 
   function openModal(product) {
+    const featuresHTML = product.features.map(feature => `
+      <div class="flex space-x-1 mb-2 items-center">
+        <iconify-icon icon="simple-line-icons:check" width="25" height="25"></iconify-icon>
+        <p class="ml-2 text-lg text-brown">${feature}</p>
+        
+      </div>
+    `).join('');
   const modalContent = document.getElementById('modalContent');
   modalContent.innerHTML = `
   <div class="2xl:container 2xl:mx-auto md:py-12 lg:px-20 md:px-6 py-9 px-4">
@@ -1175,19 +1223,19 @@ initializePage();
             </svg>
           </button>
         </div>
-        <div class="slider">
-          <div class="slide-ana lg:relative">
-            <div class="flex" style="transform: translateX(-100%)">
-              <img src=${product.imageSrc} alt="A black chair with wooden legs" class="w-full h-full" />
-            </div>
-            <div class="flex" style="transform: translateX(0%)">
-              <img src=${product.imageSrc2} alt="A black chair with wooden legs" class="w-full h-full" />
-            </div>
-            <div class="flex" style="transform: translateX(100%)">
-              <img src=${product.imageSrc3} alt="A black chair with wooden legs" class="w-full h-full" />
-            </div>
-          </div>
+        <div class="slider mx-2">
+      <div class="slide-ana lg:relative">
+        <div class="flex" style="transform: translateX(0%)"> <!-- Changed to 0% -->
+          <img src=${product.imageSrc} alt="A black chair with wooden legs" class="w-full h-full object-cover" />
         </div>
+        <div class="flex" style="transform: translateX(100%)"> <!-- Changed to 100% -->
+          <img src=${product.imageSrc2} alt="A black chair with wooden legs" class="w-full h-full object-cover" />
+        </div>
+        <div class="flex" style="transform: translateX(200%)"> <!-- Changed to 200% -->
+          <img src=${product.imageSrc3} alt="A black chair with wooden legs" class="w-full h-full object-cover" />
+        </div>
+      </div>
+    </div>
         <div class="flex items-center">
           <button onclick="goNext()" aria-label="slide forward" class="focus:outline-none focus:ring-2 focus:ring-gray-800 hover:bg-gray-100">
             <svg class="w-10 h-10 lg:w-16 lg:h-16" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1197,12 +1245,17 @@ initializePage();
         </div>
       </div>
       <div class="lg:w-1/2 flex flex-col justify-center mt-7 md:mt-8 lg:mt-0 pb-8 lg:pb-0">
-        <h1 class="text-3xl lg:text-4xl font-semibold text-gray-800 dark:text-white">Bar Stool</h1>
-        <p class="text-base leading-normal text-gray-600 dark:text-white mt-2">You don't just want to be comfortable sitting in a bar stool—you want to be comfortable shimmying it up to the bar, closer to your lover, or back slightly to include a third person in the conversation.</p>
-        <p class="text-3xl font-medium text-gray-600 dark:text-white mt-8 md:mt-10"></p>
+        <h1 class="text-3xl TheSeasons lg:text-4xl font-semibold text-gray-800 dark:text-white">${product.productName}</h1>
+        <p class="text-3xl font-medium text-gray-600 dark:text-white mt-2 md:mt-4"></p>
+        <p class="text-base leading-normal text-gray-600 dark:text-white mt-2 ">
+          ${featuresHTML}
+          </p>
+        
+        <p class="text-3xl font-medium text-gray-600 dark:text-white mt-2 md:mt-4"></p>
         <div class="flex items-center flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6 lg:space-x-8 mt-2 md:mt-2">
-          <button class="w-full md:w-3/5 border border-gray-800 text-base font-medium leading-none text-white uppercase py-6 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 bg-gray-800 text-white dark:bg-white dark:text-gray-900 dark:hover:bg-gray-200">Add to Cart</button>
-          <button class="w-full md:w-2/5 border border-gray-800 text-base font-medium leading-none text-gray-800 dark:text-white uppercase py-6 bg-transparent focus:outline-none focus:ring-2 focus:ring-offset-2 dark:bg-transparent dark:border-white dark:text-white focus:ring-gray-800 hover:bg-gray-800 hover:text-white dark:hover:bg-gray-800 ">View Details</button>
+          <button class="w-full md:w-3/5 border border-gray-800 text-base font-medium leading-none text-white uppercase py-6 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 bg-lighterbrown text-white dark:bg-white dark:text-gray-900 dark:hover:bg-gray-200">
+            Order Now</button>
+          <button class="closemodal w-full md:w-2/5 border border-gray-800 text-base font-medium leading-none text-gray-800 dark:text-white uppercase py-6 bg-transparent focus:outline-none focus:ring-2 focus:ring-offset-2 dark:bg-transparent dark:border-white dark:text-white focus:ring-gray-800 hover:bg-gray-800 hover:text-black dark:hover:bg-gray-800 ">Close</button>
         </div>
         <div class="mt-6">
           <button class="text-xl underline text-gray-800 dark:text-white dark:hover:text-gray-200 capitalize hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800">add to wishlist</button>
@@ -1239,9 +1292,16 @@ viewButtons.forEach((button, index) => {
 });
 
 
-  const closeButton = document.querySelector('.close,.closemodal');
-  closeButton.addEventListener('click', closeModal);
-  
+document.addEventListener('DOMContentLoaded', function() {
+  const modal = document.getElementById('productModal');
+
+  modal.addEventListener('click', function(event) {
+    if (event.target.classList.contains('close') || event.target.classList.contains('closemodal')) {
+      closeModal();
+    }
+  });
+});
+
 </script>
 
     
