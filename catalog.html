@@ -554,14 +554,16 @@
       </div>
     </footer>
     <!-- Modal -->
-    <div id="productModal" class="fixed top-0 left-0 w-full h-full flex items-center justify-center z-50 hidden">
-      <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-50"></div>
-      <div class="modal-content bg-white rounded-none overflow-hidden shadow-xl flex flex-col justify-center items-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-        <span class="close absolute top-0 right-0 text-3xl m-4 text-gray-700 cursor-pointer">&times;</span>
-        <div id="modalContent" class=""></div>
-      </div>
+<div id="productModal" class="fixed top-0 left-0 w-full h-full flex items-center justify-center z-50 hidden">
+  <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-50"></div>
+  <div class="modal-content bg-white rounded-none overflow-hidden shadow-xl flex flex-col justify-center items-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+    <span class="close absolute top-0 right-0 text-3xl m-4 text-gray-700 cursor-pointer">&times;</span>
+    <div id="modalContent" class="2xl:container 2xl:mx-auto md:py-12 lg:px-20 md:px-6 py-9 px-4">
+      <!-- Content Generated Dynamically -->
     </div>
-    
+  </div>
+</div>
+
 
     <script>
    // Select all navigation links
@@ -1055,7 +1057,7 @@ initializePage();
     </script>
 
 <script>
-  // Sample data array of products
+
   const products = [
     {
       imageSrc: "/images/P1-A.png",
@@ -1257,20 +1259,20 @@ function updateSlider() {
   function openModal(product) {
     let noteContent = product.note ? product.note : '<a href="index.html#contact">Contact us if you have more questions.</a>';
     const featuresHTML = product.features.map(feature => `
-      <div class="flex space-x-1 mb-2 items-center">
-        <iconify-icon icon="simple-line-icons:check" width="25" height="25"></iconify-icon>
-        <p class="ml-2 text-lg text-brown">${feature}</p>
+      <div class="flex space-x-1 sm:text-lg md:text-xl lg:text-xl  mb-2 items-center">
+        <iconify-icon icon="simple-line-icons:check" ></iconify-icon>
+        <p class="ml-2  text-brown">${feature}</p>
         
       </div>
     `).join('');
   const modalContent = document.getElementById('modalContent');
   modalContent.innerHTML = `
-  <div class="2xl:container 2xl:mx-auto md:py-12 lg:px-20 md:px-6 py-9 px-4">
   
-  <div id="viewerBox" class="lg:p-10 md:p-6 p-4 bg-white dark:bg-gray-900">
+  
+  <div id="viewerBox" class="lg:p-10 md:p-6 p-1 bg-white dark:bg-gray-900">
     
-    <div class="mt-3 md:mt-4 lg:mt-0 flex flex-col lg:flex-row items-strech justify-center lg:space-x-8">
-      <div class="lg:w-1/2 flex justify-between items-strech bg-gray-50  px-2 py-20 md:py-6 md:px-6 lg:py-24">
+    <div class="flex flex-col lg:flex-row items-strech justify-center lg:space-x-8">
+      <div class="lg:w-1/2 flex justify-between items-center bg-gray-50 sm:py-1 px-2 lg:py-20 md:py-6 md:px-6 lg:py-24">
         <div class="flex items-center">
           <button onclick="goPrev()" aria-label="slide back" class="focus:outline-none focus:ring-2 focus:ring-gray-800 hover:bg-gray-100">
             <svg class="w-10 h-10 lg:w-16 lg:h-16" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1300,7 +1302,7 @@ function updateSlider() {
         </div>
       </div>
       <div class="lg:w-1/2 flex flex-col justify-center mt-7 md:mt-8 lg:mt-0 pb-8 lg:pb-0">
-        <h1 class="text-3xl TheSeasons lg:text-4xl font-semibold text-gray-800 dark:text-white">${product.productName}</h1>
+        <h1 class="md:text-3xl TheSeasons sm:text-2xl lg:text-4xl font-semibold text-gray-800 dark:text-white">${product.productName}</h1>
         <p class="text-3xl font-medium text-gray-600 dark:text-white mt-2 md:mt-4"></p>
         <p class="text-base leading-normal text-gray-600 dark:text-white mt-2 ">
           ${featuresHTML} <p class="text-sm italic text-gray-500">${noteContent}</p>
@@ -1315,7 +1317,8 @@ function updateSlider() {
           </a>
             </button>
           
-          <button class="closemodal w-full md:w-2/5 border border-gray-800 text-base font-medium leading-none text-gray-800 dark:text-white uppercase py-6 bg-transparent focus:outline-none focus:ring-2 focus:ring-offset-2 dark:bg-transparent dark:border-white dark:text-white focus:ring-gray-800 hover:bg-gray-800 hover:text-black dark:hover:bg-gray-800 ">Close</button>
+          <button class="closemodal w-full md:w-2/5 border border-gray-800 text-base font-medium leading-none text-gray-800 dark:text-white uppercase py-6 bg-transparent focus:outline-none focus:ring-2 focus:ring-offset-2 dark:bg-transparent dark:border-white dark:text-white focus:ring-gray-800 hover:bg-gray-800 hover:text-black dark:hover:bg-gray-800 ">Close
+            </button>
             
         </div>
         <div class="mt-6">
@@ -1326,7 +1329,7 @@ function updateSlider() {
       </div>
     </div>
   </div>
-</div>
+
   `;
 
   const modal = document.getElementById('productModal');
