@@ -364,5 +364,13 @@
 				opacity: 0;
 			}
 		}
+.index-img {
+  height: 30rem;
+}
 
+@media screen and (max-width: 500px) {
+  .index-img {
+    height: 20rem;
+  }
+}
     

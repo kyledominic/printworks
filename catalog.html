@@ -325,7 +325,7 @@
             </div>
           </div>
           
-          <div class="flex justify-center items-center mb-2 lg:mb-0 lg:ml-4">
+          <div class="flex justify-center items-center mb-2 ">
             <div class="flex overflow-x-auto space-x-2" id="tagButtons">
               <!-- Buttons for filtering tags will be dynamically generated here -->
             </div>
@@ -334,8 +334,8 @@
           <div class="flex justify-center space-x-2 mb-8">
             <button id="sortByHighest" class="px-3 py-1 bg-green-400 text-white rounded hover:bg-green-600 focus:outline-none transition duration-300 ease-in-out">Sort by Highest Price</button>
             <button id="sortByLowest" class="px-3 py-1 bg-green-400 text-white rounded hover:bg-green-600 focus:outline-none transition duration-300 ease-in-out">Sort by Lowest Price</button>
-            <button id="sortAZ" class="px-3 py-1 bg-green-400 text-white rounded hover:bg-green-600 focus:outline-none transition duration-300 ease-in-out">Sort A-Z</button>
-            <button id="sortZA" class="px-3 py-1 bg-green-400 text-white rounded hover:bg-green-600 focus:outline-none transition duration-300 ease-in-out">Sort Z-A</button>
+            <button id="sortAZ" class="px-3 py-1 bg-green-400 text-white rounded hover:bg-green-600 focus:outline-none transition duration-300 ease-in-out">Sort by A-Z</button>
+            <button id="sortZA" class="px-3 py-1 bg-green-400 text-white rounded hover:bg-green-600 focus:outline-none transition duration-300 ease-in-out">Sort by Z-A</button>
           </div>
           <div class="grid grid-cols-2 lg:grid-cols-4 md:grid-cols-3 2xl:grid-cols-5 gap-4" id="cardContainer">
             
@@ -698,106 +698,240 @@ instances.forEach(function(instance) {
     
     <script>
       const cardData = [
-  {
-    imageUrl: './images/pr1.jpg',
-    title: 'Something giveaway22',
-    description: 'wedding something something something',
-    price: '100',
-    tags: ['all' , 'cups', 'gift', 'giveaway'],
-    shopee: 'https://www.facebook.com',
-    images: [
-    './images/pr1.jpg',
-    './images/pr1a.jpg',
-    './images/pr1b.jpg',
-  ],
-  },
+  
   {
     imageUrl: '/images/pr1a.jpg',
     title: 'Wooden Coaster',
-    description: '• One Side Engrave • Personalized Hangtags • Thank you card • Ribbon (theme) +30 for engrave each side',
-    price: '222',
-    tags: ['all' ,'souvenir', 'wooden', 'giveaway'],
+    description: 'Small, flat, circular varnished wood, with personalized engraved aesthetic design.',
+    inclusions: [
+    'One Side Engrave',
+    'Personalized Hangtags',
+    'Thank you card',
+    'Ribbon (theme)',
+    ],
+    note: 'Add P30 for engrave each side',
+    price: '99',
+    tags: ['all' , 'wooden', 'giveaway'],
     shopee: 'https://www.facebook.com',
     images: [
-    './images/pr1c.jpg',
-    './images/pr2.jpg',
-    './images/pr3.jpg',
-    './images/pr1b.jpg',
+    './images/pr1a.jpg',
+    './images/MP-1A.jpg',
+    './images/MP-1B.jpg',
   ],
   },
   {
-    imageUrl: '/images/pr1b.jpg',
-    title: 'Engrave Wooden Souvenir',
-    description: 'Description for card 2 goes here anniversary ',
-    price: '311',
-    tags: ['all' ,'souvenir', 'prints', 'giveaway'],
+    imageUrl: '/images/MP-2A.png',
+    title: 'Frosted Mug',
+    description: 'Glass Mug with frosted exterior design and personalized elegant design.',
+    inclusions: [
+    'Personalized Print Design',
+    'Personalized White Box',
+    'Personalized Hangtags',
+    'Thank you card',
+    'Ribbon (theme)',
+    ],
+    note: 'P110 (min. of 30pcs), P120 (29pcs below)',
+    price: '110',
+    tags: ['all' ,'souvenir', 'mug', 'giveaway'],
     shopee: 'https://www.facebook.com',
+    images: [
+    './images/MP-2A.png',
+    './images/MP-2B.png',
+    './images/MP-2C.png',
+    './images/MP-2D.png',
+    './images/MP-2E.png',
+  ],
   },
   {
-    imageUrl: '/images/pr1c.jpg',
-    title: 'Engrave Wooden Souvenir',
-    description: 'Description for card 2 goes here gift asasa.',
-    price: '12',
-    tags: ['all' ,'clothes', 'gift'],
+    imageUrl: '/images/MP-3B.png',
+    title: 'Coffee Pouch',
+    description: 'Minimalist brown pouch with 50g coffee grounds and small wooden spoon.',
+    inclusions: [
+    '50g Coffee Grounds',
+    'Personalized Hangtags',
+    'Thank you card',
+    'Ribbon (theme)',
+    ],
+    note: 'Minimum 30pcs. Add P15 for wooden spoon.',
+    price: '50',
+    tags: ['all' , 'wooden', 'giveaway'],
     shopee: 'https://www.facebook.com',
+    images: [
+    './images/MP-3A.png',
+    './images/MP-3B.png',
+  ],
   },
   {
-    imageUrl: '/images/pr1c.jpg',
-    title: 'Engrave Wooden Souvenir',
-    description: 'Description for card 2 goes here minimalist.',
-    price: '332',
-    tags: ['all' ,'prints', 'gift'],
+    imageUrl: '/images/MP-4A.png',
+    title: 'White Ceramic Mug',
+    description: 'Classic white ceramic mug with personalized aesthetic design in a windowed box. ',
+    inclusions: [
+    'White Ceramic Mug',
+    'Personalized Hangtags',
+    'White Windowed Box',
+    'Personalized Design',
+    'Ribbon (theme)',
+    ],
+    note: 'P90 (min. of 30pcs). P100 if below 29pcs',
+    price: '90',
+    tags: ['all' , 'mug', 'souvenir', 'giveaway'],
     shopee: 'https://www.facebook.com',
+    images: [
+    './images/MP-4A.png',
+    './images/MP-4B.png',
+    './images/MP-4C.png',
+    './images/MP-4D.png',
+  ],
   },
   {
-    imageUrl: '/images/pr1c.jpg',
-    title: 'Engrave Wooden Souvenir',
-    description: 'Description for card 2 goes here minimalist.',
-    price: '332',
-    tags: ['all' ,'prints', 'gift', 'giveaway'],
+    imageUrl: '/images/MP-5A.png',
+    title: 'Totebag',
+    description: 'White Aesthetic Totebag with personalized design',
+    inclusions: [
+    'White Totebag',
+    'Personalized Design',
+    ],
+    note: 'Contact us if you have any questions.',
+    price: '60',
+    tags: ['all' , 'bag', 'souvenir', 'giveaway'],
     shopee: 'https://www.facebook.com',
+    images: [
+    './images/MP-5A.png',
+  ],
   },
   {
-    imageUrl: '/images/pr1c.jpg',
-    title: 'Engrave Wooden Souvenir',
-    description: 'Description for card 2 goes here minimalist.',
-    price: '332',
-    tags: ['all' ,'prints', 'gift', 'giveaway'],
+    imageUrl: '/images/MP-6A.png',
+    title: 'Ref Magnet',
+    description: 'Cut Out Refrigerator Magnet with personalized design',
+    inclusions: [
+    'Cut Out Ref Magnet',
+    'Personalized Design',
+    ],
+    note: 'Contact us if you have any questions.',
+    price: '30',
+    tags: ['all' , 'souvenir', 'magnet'],
     shopee: 'https://www.facebook.com',
+    images: [
+    './images/MP-6A.png',
+  ],
   },
   {
-    imageUrl: '/images/pr1c.jpg',
-    title: 'Engrave Wooden Souvenir',
-    description: 'Description for card 2 goes here minimalist.',
-    price: '332',
-    tags: ['all' ,'prints', 'gift', 'giveaway'],
+    imageUrl: '/images/MP-7A.png',
+    title: 'Baby Neck Pillow',
+    description: 'Baby neck pillow with personalized design',
+    inclusions: [
+    'Neck Pillow',
+    'Personalized Design',
+    ],
+    note: 'Contact us if you have any questions.',
+    price: '80',
+    tags: ['all' , 'souvenir', 'giveaway'],
     shopee: 'https://www.facebook.com',
+    images: [
+    './images/MP-7A.png',
+  ],
   },
   {
-    imageUrl: '/images/pr1c.jpg',
-    title: 'Engrave Wooden Souvenir',
-    description: 'Description for card 2 goes here minimalist.',
-    price: '332',
-    tags: ['all' ,'prints', 'gift', 'giveaway'],
+    imageUrl: '/images/MP-12A.png',
+    title: 'Wooden Fan',
+    description: 'Minimalist aesthetic wooden fan',
+    inclusions: [
+    'Wooden Fan',
+    'Personalized Hangtags',
+    ],
+    note: 'Contact us if you have any questions.',
+    price: '50',
+    tags: ['all' , 'souvenir', 'giveaway','wooden'],
     shopee: 'https://www.facebook.com',
+    images: [
+    './images/MP-12A.png',
+  ],
   },
   {
-    imageUrl: '/images/pr1c.jpg',
-    title: 'Engrave Wooden Souvenir',
-    description: 'Description for card 2 goes here minimalist.',
-    price: '332',
-    tags: ['all' ,'prints', 'gift', 'giveaway'],
+    imageUrl: '/images/MP-13A.png',
+    title: 'Abaca Wine Carrier',
+    description: 'Abaca wine barrier bag with personalized hangtag',
+    inclusions: [
+    'Abaca Wine Carrier',
+    'Personalized Hangtags',
+    ],
+    note: 'Contact us if you have any questions.',
+    price: '150',
+    tags: ['all' , 'souvenir', 'giveaway','bag'],
     shopee: 'https://www.facebook.com',
+    images: [
+    './images/MP-13A.png',
+  ],
   },
   {
-    imageUrl: '/images/pr1c.jpg',
-    title: 'Engrave Wooden Souvenir',
-    description: 'Description for card 2 goes here minimalist.',
-    price: '332',
-    tags: ['all' ,'prints', 'gift', 'giveaway'],
+    imageUrl: '/images/MP-8A.png',
+    title: 'Alcohol Spray',
+    description: 'Alcohol Spray with personalized design',
+    inclusions: [
+    'Spray Bottle with Alcohol',
+    'Personalized Design',
+    'Ribbon (theme)',
+    ],
+    note: 'Contact us if you have any questions.',
+    price: '35',
+    tags: ['all' , 'souvenir', 'giveaway','spray'],
     shopee: 'https://www.facebook.com',
+    images: [
+    './images/MP-8A.png',
+  ],
   },
-  // Add more card objects as needed
+  {
+    imageUrl: '/images/MP-9A.png',
+    title: 'Linen Spray',
+    description: 'Linen spray with personalized design',
+    inclusions: [
+    'Linen Spray',
+    'Personalized Design',
+    'Scents Option Available',
+    ],
+    note: 'Scents: Bamboo, Shangrila, or Lavender.',
+    price: '40',
+    tags: ['all' , 'souvenir', 'giveaway','spray'],
+    shopee: 'https://www.facebook.com',
+    images: [
+    './images/MP-9A.png',
+  ],
+  },
+  {
+    imageUrl: '/images/MP-10A.png',
+    title: 'Hand Sanitizer Gel',
+    description: 'Hand Sanitizer Gel with personalized design',
+    inclusions: [
+    'Hand Sanitizer Gel',
+    'Personalized Design',
+    'Ribbon (theme)',
+    ],
+    note: 'Contact us if you have any questions.',
+    price: '35',
+    tags: ['all' , 'souvenir', 'giveaway','spray'],
+    shopee: 'https://www.facebook.com',
+    images: [
+    './images/MP-10A.png',
+  ],
+  },
+  {
+    imageUrl: '/images/MP-11A.png',
+    title: 'AlcoPen',
+    description: 'Alcohol Bottled Pen with personalized design',
+    inclusions: [
+    'Alcohol Bottled Pen',
+    'Personalized Design',
+    'Themed Packaging',
+    ],
+    note: 'Contact us if you have any questions.',
+    price: '40',
+    tags: ['all' , 'souvenir', 'giveaway','spray'],
+    shopee: 'https://www.facebook.com',
+    images: [
+    './images/MP-11A.png',
+  ],
+  },
+  
 ];
 
 // Function to populate the card container with dynamic cards
@@ -810,13 +944,13 @@ function createCard(card) {
     <img src="${card.imageUrl}" alt="Card Image" class="w-full h-48 object-cover mb-2">
     <div class="px-3 pb-1 flex-1">
       <h2 class="text-xl font-semibold mb-1">${card.title}</h2>
-      <p class="text-gray-600">${card.description}</p>
+      <p class="text-gray-500 text-sm">${card.description}</p>
       
     </div>
-    <div class="flex flex-row justify-between mt-1 px-3 pb-1">
+    <div class="flex flex-row justify-between mt-1 px-3 ">
         
-        <a href="https://www.shopee.ph" target="_blank" class="text-white font-semibold bg-red-300 hover:bg-red-500 cursor-pointer text-sm p-1 px-2 items-center rounded-lg  ">order now</a>
-        <p class="text-gray-800 font-semibold flex items-center">P${card.price}</p>
+        <p class="text-lightbrown hover:text-green-600 font-semibold cursor-pointer text-sm  underline ">See Inclusions</p>
+        <p class="text-gray-800 font-semibold ">P${card.price}</p>
         </div>
     
   `;
@@ -826,34 +960,59 @@ function createCard(card) {
     modal.className =
       'fixed top-0 left-0 flex items-center justify-center w-full h-full bg-gray-800 bg-opacity-50 z-50 opacity-0 transition-opacity duration-300';
     modal.innerHTML = `
-      <div class="bg-white grid grid-cols-1 md:grid-cols-2 gap-4 p-4 shadow-md rounded-md overflow-hidden max-w-5xl relative mx-3">
-        <span class="absolute top-2 right-2 cursor-pointer text-gray-500 hover:text-gray-700 text-2xl" onclick="this.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode)">
-          &times;
-        </span>
-        <div class="relative">
-          <div class="">
-            <img src="${card.images[0]}" alt="Product Image" class="w-full h-96 object-cover mb-2 rounded modal-main-image" >
-            </div>
-         
-          <div class=" absolute bg-black bg-opacity-30 bottom-0 left-0 right-0 flex justify-center space-x-2 py-2 navigators">
+    <div class="bg-white grid grid-cols-1 md:grid-cols-2 gap-6 p-4 shadow-md rounded-md overflow-hidden max-w-5xl relative mx-3">
+    <span class="absolute top-1 right-3 cursor-pointer text-gray-500 hover:text-gray-700 text-3xl" onclick="this.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode)">
+        &times;
+    </span>
+    <div class="relative">
+        <div class="index-img ">
+            <img src="${card.images[0]}" alt="Product Image" class="w-full h-full object-cover mb-2 rounded modal-main-image">
+        </div>
+        <div class="absolute bg-black bg-opacity-30 bottom-0 left-0 right-0 flex justify-center space-x-2 py-2 navigators">
             ${card.images
-              .map(
-                (image, index) => `
-                  <img src="${image}" alt="Product Image" class="w-14 h-14 object-cover rounded cursor-pointer ${
-                  index === 0 ? 'border-2 border-blue-500' : ''
-                }" data-index="${index}">
-                `
-              )
-              .join('')}
+                .map(
+                    (image, index) => `
+                    <img src="${image}" alt="Product Image" class="w-14 h-14 object-cover rounded cursor-pointer ${
+                        index === 0 ? 'border-2 border-blue-500' : ''
+                    }" data-index="${index}">
+                    `
+                )
+                .join('')}
+        </div>
+    </div>
+    <div class="flex flex-col justify-between"> <!-- Changed justify-start to justify-between -->
+        <div>
+            <h2 class="text-4xl TheSeasons font-semibold mb-2">${card.title}</h2>
+            <p class="text-gray-800 text-2xl font-semibold mb-2">P${card.price}</p>
+            
+            <p class="text-gray-600 mb-2">${card.description}</p>
+            <p class="text-gray-600 font-semibold ">Inclusions:</p>
+            <div class="mb-2">
+                ${card.inclusions
+                    .map(
+                        (inclusions) => `
+                        <p class="text-gray-600 align-items-center flex"><iconify-icon icon="simple-line-icons:check" class="mr-1" ></iconify-icon> ${inclusions}</p>
+                        `
+                    )
+                    .join('')}
+            </div>
+            <p class="text-gray-600 font-semibold ">Note:</p>
+            <p class="text-gray-500 mb-2 italic text-sm">${card.note}</p>
+        </div>
+        <div class="justify-end ">
+          <a href="https://shopee.ph/printworks.ph" target="_blank" >
+          <p class="text-gray-600 hover:text-red-600 text-sm font-semibold mb-2 underline">See Our Shopee Store</p>
+          </a>
+          <div class="flex flex-row gap-3"> <!-- Changed justify-bottom to justify-end -->
+              <!-- Added a container div for buttons -->
+                  <a href="https://www.facebook.com/teeworkzph" target="_blank" class="w-1/2 flex justify-center items-center font-medium uppercase text-white bg-lightbrown hover:brightness-50 cursor-pointer text-sm py-4 px-4">send us message<iconify-icon class="items-center ml-1" icon="lucide:mail"></iconify-icon></a>
+                  <button class="w-1/2 font-medium uppercase text-brown border border-gray-500 bg-white hover:bg-gray-500 cursor-pointer text-sm py-4 px-4 close-button">Close</button>
+              
           </div>
         </div>
-        <div class="flex flex-col justify-center">
-          <h2 class="text-3xl font-semibold mb-4">${card.title}</h2>
-          <p class="text-gray-600 mb-4">${card.description}</p>
-          <p class="text-gray-800 font-semibold mb-2">Price: P${card.price}</p>
-          <button class="mt-auto text-white font-semibold bg-red-500 hover:bg-red-700 cursor-pointer text-sm p-2 px-4 rounded-lg">Order Now</button>
-        </div>
-      </div>
+    </div>
+</div>
+
     `;
 
     const navigators = modal.querySelectorAll('.navigators img');
@@ -873,6 +1032,8 @@ function createCard(card) {
         document.body.removeChild(modal);
       }, 300);
     };
+
+    modal.querySelector('.close-button').addEventListener('click', closeModal);
 
     modal.addEventListener('click', (event) => {
       if (event.target.classList.contains('bg-gray-800')) {
@@ -1064,10 +1225,15 @@ initializePage();
       imageSrc2: "/images/P1-B.png",
       imageSrc3: "/images/P1-C.png",
       productName: "SET A Engrave Wooden Souvenirs",
-      features: ["2pcs Wooden Mug 150ml","2pcs Wooden Coaster ",
-      "50g Coffee Grounds", "Large Abaca Box" , "Thank You Card" , 
-      "Personalized Hangtags","Ribbon (theme)", "+30 for engrave each side"],
-      price: "P 599",
+      features: [
+      "2pcs Wooden Mug 150ml",
+      "2pcs Wooden Coaster ",
+      "50g Coffee Grounds", 
+      "Large Abaca Box" , 
+      "Personalized Hangtags",
+      "Card & Ribbon (theme)", 
+      "+30 for engrave each side"],
+      price: "P599",
       shopLinks: {
         view: "#",
         shopee: "#"
@@ -1078,10 +1244,15 @@ initializePage();
       imageSrc2: "/images/P1-B.png",
       imageSrc3: "/images/P1-C.png",
       productName: "SET B Engrave Wooden Souvenirs",
-      features: ["Wooden Mug 150ml","Wooden Coaster ",
-      "50g Coffee Grounds", "Medium Abaca Box" , "Thank You Card" , 
-      "Ribbon (theme)", "+30 for engrave each side"],
-      price: "P 399",
+      features: [
+      "Wooden Mug 150ml",
+      "Wooden Coaster ",
+      "50g Coffee Grounds", 
+      "Medium Abaca Box" , 
+      "Thank You Card" , 
+      "Ribbon (theme)", 
+      "+30 for engrave each side"],
+      price: "P399",
       shopLinks: {
         view: "#",
         shopee: "#"
@@ -1092,9 +1263,14 @@ initializePage();
       imageSrc2: "/images/pr1b.jpg",
       imageSrc3: "/images/P1-C.png",
       productName: "SET C Engrave Wooden Souvenirs",
-      features: [  "Wooden Mug with name", "4x4 Sinamay Bag ",
-      "Personalized Hangtags","Thank You Card" ,"Ribbon (theme)", "+30 for engrave each side"],
-      price: "P 199",
+      features: [  
+      "Wooden Mug with name", 
+      "4x4 Sinamay Bag ",
+      "Personalized Hangtags",
+      "Thank You Card" ,
+      "Ribbon (theme)", 
+      "+30 for engrave each side"],
+      price: "P199",
       shopLinks: {
         view: "#",
         shopee: "#"
@@ -1105,9 +1281,14 @@ initializePage();
       imageSrc2: "/images/P4-B.png",
       imageSrc3: "/images/P4-C.png",
       productName: "SET A Handwooven Bath Towels",
-      features: ["Medium ABACA BOX","Handwooven Towel","Personalized Digital Embroidery ", "Thank You Card" , 
-      "Personalized Hangtags","Ribbon",],
-      price: "P 650",
+      features: [
+      "Medium ABACA BOX",
+      "Handwooven Towel",
+      "Personalized Digital Embroidery ", 
+      "Thank You Card" , 
+      "Personalized Hangtags",
+      "Ribbon( theme)",],
+      price: "P650",
       shopLinks: {
         view: "#",
         shopee: "#"
@@ -1119,9 +1300,13 @@ initializePage();
       imageSrc2: "/images/P4-C.png",
       imageSrc3: "/images/P4-B.png",
       productName: "SET B Handwooven Bath Towels",
-      features: ["Corrugated Box Only","Handwooven Towel", "Thank You Card" , 
-      "Personalized Hangtags","Ribbon",],
-      price: "P 400",
+      features: [
+      "Corrugated Box Only",
+      "Handwooven Towel",
+      "Thank You Card" , 
+      "Personalized Hangtags",
+      "Ribbon",],
+      price: "P400",
       shopLinks: {
         view: "#",
         shopee: "#"
@@ -1132,10 +1317,16 @@ initializePage();
       imageSrc2: "/images/P5-D.png",
       imageSrc3: "/images/P5-C.png",
       productName: "Planner and Soda Glass Set A",
-      features: ["2024 Planner (Color options)","16oz Frosted Soda Glass","Transparent Drawer Box","Free Layout for all items", "Thank You Card" , 
-      "Personalized Hangtags","Ribbon","*MOQ - 10sets (+100.00 if below) "],
+      features: [
+      "2024 Planner (Color options)",
+      "16oz Frosted Soda Glass",
+      "Transparent Drawer Box",
+      "Free Layout for all items",
+      "Personalized Hangtags",
+      "Thank You Card & Ribbon",
+      "*MOQ - 10sets (+100.00 if below) "],
       note: "Note: Drawer Box Colors available in Kraft, Black, or Red. 20oz Soda Glass available (add P50)." ,
-      price: "P 500",
+      price: "P500",
       shopLinks: {
         view: "#",
         shopee: "#"
@@ -1146,10 +1337,16 @@ initializePage();
       imageSrc2: "/images/P5-B.png",
       imageSrc3: "/images/P5-B.png",
       productName: "Planner and Soda Glass Set B",
-      features: ["2024 Planner (Color options)","Corrugated Box","Free Layout for all items", "Thank You Card" , 
-      "Personalized Hangtags","Ribbon","*MOQ - 10sets (+100.00 if below) "],
+      features: [
+      "2024 Planner (Color options)",
+      "Corrugated Box",
+      "Free Layout for all items",
+      "Thank You Card" , 
+      "Personalized Hangtags",
+      "Ribbon",
+      "*MOQ - 10sets (+100.00 if below) "],
       note: "Note: (+50.00 if Transparent Drawer Box (Kraft/Black/Red). 2024 Planner (Color availability depends)." ,
-      price: "P 300",
+      price: "P300",
       shopLinks: {
         view: "#",
         shopee: "#"
@@ -1160,10 +1357,18 @@ initializePage();
       imageSrc2: "/images/P6-C.png",
       imageSrc3: "/images/P6-D.png",
       productName: "Company Merch Giveaway Full Set",
-      features: ["A5 Lined Journal w/ Logo","11oz Ceramic Mug","Metallic Ballpen with Logo ","12x14 Canvass Totebag","Transparent Drawer Box","Free Layout for all items", "Thank You Card" , 
-      "Personalized Hangtags","Ribbon","*MOQ - 50sets (+50.00 if below) "],
+      features: [
+      "A5 Lined Journal w/ Logo",
+      "11oz Ceramic Mug",
+      "Metallic Ballpen with Logo ",
+      "12x14 Canvass Totebag",
+      "Transparent Drawer Box",
+      "Free Layout for all items",
+      "Personalized Hangtags",
+      "Ribbon & Thank You Card",
+      "*MOQ - 50sets (+50.00 if below) "],
       note: "Note: Drawer Box Colors available in Kraft, Black, or Red. Optionals: Add P20.00 to upgrade mug to Frosted Glass. Add P15 for colored Totebag handle." ,
-      price: "P 350",
+      price: "P350",
       shopLinks: {
         view: "#",
         shopee: "#"
@@ -1174,10 +1379,15 @@ initializePage();
       imageSrc2: "/images/P7-B.png",
       imageSrc3: "/images/P7-C.png",
       productName: "Holiday Mugs and Coffee Set",
-      features: ["Holiday Mug","Wooden Coaster","50g Coffee Grounds","Corrugated Box", 
-      "Free Greeting Card","Christmas Ribbon"],
+      features: [
+      "Holiday Mug",
+      "Wooden Coaster",
+      "50g Coffee Grounds",
+      "Corrugated Box", 
+      "Free Greeting Card",
+      "Christmas Ribbon"],
       
-      price: "P 250",
+      price: "P250",
       shopLinks: {
         view: "#",
         shopee: "https://shopee.ph/CHRISTMAS-HOLIDAY-MUGS-11oz-Hot-and-Cold-Ceramic-Mugs-for-gifts-and-souvenirs-i.393009278.21583961434?sp_atk=072600db-c7a9-4369-842d-99e452c483f5&xptdk=072600db-c7a9-4369-842d-99e452c483f5"
@@ -1223,7 +1433,7 @@ initializePage();
                 <p class="text-brown hover:text-black hover:underline">View</p>
               </button>
               <p>|</p>
-              <a href="${product.shopLinks.shopee}" target="_blank" class="ml-2">
+              <a href="https://shopee.ph/printworks.ph" target="_blank" class="ml-2">
                 <p class="text-brown hover:text-black hover:underline">Shopee</p>
               </a>
             </div>
@@ -1301,31 +1511,29 @@ function updateSlider() {
           </button>
         </div>
       </div>
-      <div class="lg:w-1/2 flex flex-col justify-center mt-7 md:mt-8 lg:mt-0 pb-8 lg:pb-0">
+      <div class="lg:w-1/2 flex flex-col justify-center ">
         <h1 class="md:text-3xl TheSeasons sm:text-2xl lg:text-4xl font-semibold text-gray-800 dark:text-white">${product.productName}</h1>
-        <p class="text-3xl font-medium text-gray-600 dark:text-white mt-2 md:mt-4"></p>
+        <p class="text-3xl font-semibold text-gray-800 mt-2 md:mt-4">${product.price}</p>
         <p class="text-base leading-normal text-gray-600 dark:text-white mt-2 ">
           ${featuresHTML} <p class="text-sm italic text-gray-500">${noteContent}</p>
           </p>
           
         <p class="text-3xl font-medium text-gray-600 dark:text-white mt-2 md:mt-4"></p>
-        <div class="flex items-center flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6 lg:space-x-8 mt-2 md:mt-2">
+        <div class="items-center ">
           
-          <button class="w-full md:w-3/5 border border-gray-800 text-base font-medium leading-none text-white uppercase py-6 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 bg-lightbrown text-white dark:bg-white dark:text-gray-900 dark:hover:bg-gray-200">
-            <a href="https://www.facebook.com/teeworkzph" target="_blank" >
-            Order Now
+          <div class="justify-end mt-auto ">
+          <a href="https://shopee.ph/printworks.ph" target="_blank" >
+          <p class="text-gray-600 hover:text-red-600  font-semibold mb-3 underline">See Our Shopee Store</p>
           </a>
-            </button>
-          
-          <button class="closemodal w-full md:w-2/5 border border-gray-800 text-base font-medium leading-none text-gray-800 dark:text-white uppercase py-6 bg-transparent focus:outline-none focus:ring-2 focus:ring-offset-2 dark:bg-transparent dark:border-white dark:text-white focus:ring-gray-800 hover:bg-gray-800 hover:text-black dark:hover:bg-gray-800 ">Close
-            </button>
+          <div class="flex flex-row gap-3">
+                  <a href="https://www.facebook.com/teeworkzph" target="_blank" class="w-1/2 flex justify-center items-center font-medium uppercase text-white bg-lightbrown hover:brightness-50 cursor-pointer text-sm py-4 px-4">send us message<iconify-icon class="items-center ml-1" icon="lucide:mail"></iconify-icon></a>
+                  <button class="w-1/2 font-medium uppercase text-brown border border-gray-500 bg-white hover:bg-gray-500 cursor-pointer text-sm py-4 px-4 closemodal">Close</button>
+              
+          </div>
+        </div>
             
         </div>
-        <div class="mt-6">
-          <a href="https://shopee.ph/printworks.ph" target="_blank" >
-          <button  class="text-xl underline text-gray-800 dark:text-white dark:hover:text-gray-200 capitalize hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800">See our Shopee Store</button>
-            </a>
-          </div>
+        
       </div>
     </div>
   </div>
